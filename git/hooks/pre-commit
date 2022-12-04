@@ -9,5 +9,5 @@ isort .
 # Code formatting
 black -l 120 .
 
-# Read all changed files
+# Readd all changed files
 git add .

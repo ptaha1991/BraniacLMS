@@ -109,6 +109,7 @@ AUTH_USER_MODEL = "authapp.CustomUser"
 
 AUTHENTICATION_BACKENDS = (
     "social_core.backends.github.GithubOAuth2",
+    "social_core.backends.vk.VKOAuth2",
     "django.contrib.auth.backends.ModelBackend",
 )
 
@@ -151,3 +152,7 @@ MEDIA_ROOT = BASE_DIR / "media"
 
 SOCIAL_AUTH_GITHUB_KEY = "552c77cfbbac64ce1f08"
 SOCIAL_AUTH_GITHUB_SECRET = "3ae4243377db3e317e4ae3f0dd86b0118cd6a44c"
+
+SOCIAL_AUTH_VK_OAUTH2_KEY = "51496701"
+SOCIAL_AUTH_VK_OAUTH2_SECRET = "sVbDYcDwbPiMFw5fn4xi"
+SOCIAL_AUTH_VK_OAUTH2_SCOPE = ["email"]

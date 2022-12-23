@@ -114,7 +114,7 @@ class TestCoursesWithMock(TestCase):
         with open("mainapp/fixtures/005_feedback_list_7.bin", "rb") as inpf, mock.patch(
             "django.core.cache.cache.get"
         ) as mocked_cache:
-            mocked_cache.return_value = pickle.load(inpf)
+            mocked_cache.return_value = str(pickle.load(inpf))
             result = self.client.get(path)
             self.assertEqual(result.status_code, HTTPStatus.OK)
             self.assertTrue(mocked_cache.called)
